@@ -110,8 +110,9 @@ This is an introduction on how class imbalance in machine learning has been hand
 	* Wang S, Liu W, Wu J, Cao L, Meng Q, Kennedy PJ. Training deep neural networks on imbalanced data sets. In: 2016 international joint conference on neural networks (IJCNN). 2016. p. 4368–741
 	* Lin T-Y, Goyal P, Girshick RB, He K, Doll ́ar P. Focal loss for dense object detection. In: IEEE international conference on computer vision (ICCV). vol. 2017. 2017. p. 2999–3007.
 	* Wang H, Cui Z, Chen Y, Avidan M, Abdallah AB, Kronzer A. Predicting hospital readmission via cost-sensitive deep learning. IEEE/ACM transactions on computational biology and bioinformatics.
-	* Zhang C, Tan KC, Ren R. Training cost-sensitive deep belief networks on imbalance data problems. In: 2016 international joint conference on neural networks (IJCNN). 2016. p. 4362–7.
-	* 3. Hybrid methods Huang C, Li Y, Loy CC, Tang X. Learning deep representation for imbalanced classifcation. In: 2016 IEEE conference on computer vision and pattern recognition (CVPR). 2016. p. 5375–84.
+	* Zhang C, Tan KC, Ren R. Training cost-sensitive deep belief networks on imbalance data problems. In: 2016 international joint conference on neural networks (IJCNN). 2016. p. 4362–4367.
+4. Hybrid methods
+  * Huang C, Li Y, Loy CC, Tang X. Learning deep representation for imbalanced classifcation. In: 2016 IEEE conference on computer vision and pattern recognition (CVPR). 2016. p. 5375–84.
 	* Ando S, Huang CY. Deep over-sampling framework for classifying imbalanced data. In: Ceci M, Hollm ́en J, Todorovski L, Vens C, Dˇzeroski S, editors. Machine learning and knowledge discovery in databases. Cham: Springer; 2017. p. 770–85.
 	* Dong Q, Gong S, Zhu X. Imbalanced deep learning by minority class incremental rectifcation. In: IEEE transactions on pattern analysis and machine intelligence. 2018. p. 1–1
 
