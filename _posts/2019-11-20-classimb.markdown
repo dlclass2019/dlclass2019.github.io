@@ -89,9 +89,9 @@ Hence to summarize CoSen CNN, first we initialize CNN parameters $$ \theta $$ an
 
 The hybrid method combines the idea of both data level and algorithm level method. Huang, Li et al. proposed a method called Large Margin Local Embedding that uses a Convolutional neural network to learn an embedding $$ f(x) $$ from input data $$ X $$ into a feature space such that the embedded features are discriminative without local class imbalance. The motivation of this method is that the minority classes often contain very few instances with high degree of visual variability.
 
-For the experiment, first we create clusters for each classes in the training sets. Now for every query $$ q $$, we find its kNN cluster centroids $$ \psi = {m_i}^{k}_{i=1} $$ from all classes learned in the training stage. If all the $$ k $$ cluster neighbors belong to the same class, $$ q $$ is labelled by that class and exit. Else, we would label $$ q $$ as $$ y_q $$ based on the following formula
+For the experiment, first we create clusters for each classes in the training sets. Now for every query $$ q $$, we find its kNN cluster centroids $$ \phi = {m_i}^{k}_{i=1} $$ from all classes learned in the training stage. If all the $$ k $$ cluster neighbors belong to the same class, $$ q $$ is labelled by that class and exit. Else, we would label $$ q $$ as $$ y_q $$ based on the following formula
 
-$$ y_q = argmax_c(min_{m_j \epsilon (q), y_i=c} D(f(q) - f(m_j)) - max_{m_i \epsilon \psi(q), y_i=c} D(f(q), f(m_i))) $$
+$$ y_q = argmax_c(min_{m_j \epsilon (q), y_i=c} D(f(q) - f(m_j)) - max_{m_i \epsilon \phi(q), y_i=c} D(f(q), f(m_i))) $$
 
 This is an introduction on how class imbalance in machine learning has been handled throughout the years. We have only covered the main idea for dealing with class imbalance. For more detailed explanation, it is advised to look into the papers in Reference Section.
 
