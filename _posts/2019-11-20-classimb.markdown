@@ -7,6 +7,9 @@ mathjax: true
 ---
 <!-- Need to include this line to enable mathjax -->
 {% include mathjax.html %}
+
+Posted by Rahul Pandey, Angeela Acharya, Junxiang (Will) Wang and Jomana Bashatah. Presented by Zhengyang Fan, Zhenlong Jiang and Di Zhang.
+
 Class imbalance is a problem in machine learning where the number of one class of data is far less than the other classes. Such a problem is naturally inherent in many real-world applications like `fraud detection`, `identification of rare diseases`, etc.
 
 Before building any classifier model, it is important for us to deal with the problem of imbalanced data as there are issues associated with it. For instance, let us suppose that we are building a model to identify which transactions are fraudulent, based on the available features. Now suppose that the data is imbalanced i.e. there are `999` examples correspond to non-fraudulent transactions (majority class) and only `1` example corresponding to the fraudulent transaction (minority class). In such a scenario, the gradient component corresponding to the minority class is much smaller than that of the majority class. Thus, while making predictions, the model is biased towards the majority class which leads to inaccurate classification of the minority class.
