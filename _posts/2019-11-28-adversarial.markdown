@@ -2,6 +2,9 @@
 title: Adversarial Learning
 date: 2019-11-26
 ---
+
+Posted by  Xavier Gitiaux. Presented by Azadeh Gharibreza Yazdi and Farnaz Behnia
+
 This post collects notes on a neural network vulnerability known as adversarial
 examples. Adversarial examples are inputs designed by 
 perturbing an actual input so that the neural network
