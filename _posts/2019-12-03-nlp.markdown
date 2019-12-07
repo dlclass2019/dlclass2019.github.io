@@ -20,7 +20,7 @@ Natural Language Process (NLP) is a computerized approach to analyze and represe
 
 In the blog, we provide a simple introduction to Natural Language Processing that covers common techniques of processing text data and modern applications of deep learning models in NLP. 
 
-<img src="images/NLP_1.PNG">
+<img src="/images/NLP_1.PNG">
 
 In the sentence “I want an early upgrade” we tag each word as pronoun, verb, noun and so on. One reason of doing Parts-of-speech tagging is that knowing the syntactic role of a word helps with identifying the neighboring words. For example, a noun is normally preceded by determiners and adjectives.
 
