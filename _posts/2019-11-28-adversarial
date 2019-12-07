@@ -18,7 +18,7 @@ input is the original image perturbed by the noise shown in the middle. Although
 perceptual differences between the left and right images -- they both look like pandas -- the neural network
 is very confident that the right input corresponds to the picture of a gibbon.
 
-![Adversarial Example](/image/pandas.png)*Adversarial Example (source: [Goodfellow et al.](https://arxiv.org/pdf/1412.6572.pdf))*
+![Adversarial Example](/images/pandas.png)*Adversarial Example (source: [Goodfellow et al.](https://arxiv.org/pdf/1412.6572.pdf))*
 
 ## Why does it matter?
 The lack of robustness to small perturbations is seen as a sign that 
