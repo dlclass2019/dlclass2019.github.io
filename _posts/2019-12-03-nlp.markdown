@@ -9,6 +9,7 @@ mathjax: true
 {% include mathjax.html %}
 ## Interpreting the State-of-the-art Natural Language Processing Models
 
+Posted by Zhengyang Fan, Zhenlong Jiang and Di Zhang. Presented by Rahul Pandey, Angeela 	Acharya, Junxiang (Will) Wang and  Jomana Bashatah
 
 ### What is Natural Language Processing
 Natural Language Process (NLP) is a computerized approach to analyze and represent naturally occurring texts for the purpose of achieving human-like language processing. In the era of big data, Natural Language Processing has witnessed a variety of applications that include but not limited to
