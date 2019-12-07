@@ -9,7 +9,7 @@ mathjax: true
 {% include mathjax.html %}
 Class imbalance is a problem in machine learning where the number of one class of data is far less than the other classes. Such a problem is naturally inherent in many real-world applications like `fraud detection`, `identification of rare diseases`, etc.
 
-Before building any classifier model, it is important for us to deal with the problem of imbalanced data as there are issues associated with it. For instance, let us suppose that we are building a model to identify which transactions are fraudulent, based on the available features. Now suppose that the data is imbalanced i.e. there are `999` examples that correspond to non-fraudulent transactions (majority class) and only `1` example corresponding to the fraudulent transaction (minority class). In such a scenario, the gradient component corresponding to the minority class is much smaller than that of the majority class. Thus, while making predictions, the model is biased towards the majority class which leads to an inaccurate classification of the minority class.
+Before building any classifier model, it is important for us to deal with the problem of imbalanced data as there are issues associated with it. For instance, let us suppose that we are building a model to identify which transactions are fraudulent, based on the available features. Now suppose that the data is imbalanced i.e. there are `999` examples correspond to non-fraudulent transactions (majority class) and only `1` example corresponding to the fraudulent transaction (minority class). In such a scenario, the gradient component corresponding to the minority class is much smaller than that of the majority class. Thus, while making predictions, the model is biased towards the majority class which leads to inaccurate classification of the minority class.
 
 ![](http://dlclass2019.github.io/images/class_imb.png)
 
@@ -29,18 +29,18 @@ In this blog, we will mention different techniques that have been used to overco
 ### Data Level Method
 Data level methods are those techniques that directly modify the class distribution of training samples so as to make them balanced. There are different data-level methods that we can use in practice:
 
-**_Random Under-sampling:_** Random Under-sampling balances the data distribution by removing samples from the majority class randomly. While it improves the run time, its major issue is that it may ignore some useful information from the majority class . Also, the chosen sample may be a biased sample.
+**_Random Under-sampling:_** Random Under-sampling balances the data distribution by removing samples from the majority class randomly. While it improves the run time, its major issue is that it may ignore some useful information from the majority class . Also, the chosen sample may be biased.
 
 **_Random Over-sampling:_** This approach increases the number of instances in the minority class by randomly replicating them in order to present a higher representation of the minority class in the sample. Although there is no information loss in this approach, there is a chance of overfitting because of the repetition of the minority class data.
 
-**_Cluster-based Over-sampling:_** In this approach, we apply k-means clustering algorithm to both the minority and majority class independently. After clustering, each cluster is oversampled so that all the clusters of the same class have the same number of instances and all the classes have the same size. This method overcomes challenges within-class imbalance, where a class is composed of different sub-clusters and each sub-cluster does not contain the same number of examples. However, just like in random oversampling, this approach has the tendency to overfit the data.
+**_Cluster-based Over-sampling:_** In this approach, we apply a k-means clustering algorithm to both the minority and majority class independently. After clustering, each cluster is oversampled so that all the clusters of the same class have the same number of instances and all the classes have the same size. This method overcomes challenges within-class imbalance, where a class is composed of different sub-clusters and each sub-cluster does not contain the same number of examples. However, just like in random oversampling, this approach has the tendency to overfit the data.
 
 ![](http://dlclass2019.github.io/images/resmple_imb.png)
 
 **Fig 2.** Resampling strategies by cluster-based oversampling for the imbalanced dataset
 <br /><br />
 
-**_Dynamic sampling:_** The approach of dynamic sampling proposed by Pouyanfar, Tao, Mohan and et al. (2018) is slightly more complex than the previous ones. In this approach, we dynamically sample the data as it is being trained. For the experiment, image data has been taken. The proposed model includes a real-time data augmentation module, CNN transfer learning module, and dynamic sampling module that samples data based on F1 scores. We will go through the each process in detail next.
+**_Dynamic sampling:_** The approach of dynamic sampling proposed by Pouyanfar, Tao, Mohan and et al. (2018) is slightly more complex than the previous ones. In this approach, we dynamically sample the data as it is being trained. For the experiment, image data has been taken. The proposed model includes a real-time data augmentation module, CNN transfer learning module, and dynamic sampling module that samples data based on F1 scores. We will go through each process in detail next.
 
 First, the data augmentation is done using techniques such as image rotations, flips, brightness, smoothness to generate different samples. Next, the updated samples are passed to an Inception (V3) model. Inception model is a widely-used convolution neural network based image recognition model that has been shown to attain a very good accuracy on the ImageNet dataset. In the Inception model, only the last layer is made trainable as the early layers capture more generic features of the images. Now, as we train the Inception model with the sampled dataset, we compute a new F1-score every time on the test set and compare it with the previous f1 score that we computed using a different sample.
 
@@ -48,13 +48,13 @@ The F1-scores of class $$ c_j $$ in iteration $$ i $$, $$ f1_{i,j} $$ are calcul
 
 $$ f1_{i,j} = \frac{2.Rec_{i,j}.Pre_{i,j}}{Rec_{i,j} + Pre_{i,j}} $$
 
-This will help us decide whether to over-sample or under-sample the data and see which samples actually produce a good result. To find out the how much to over-sample or under-sample the number of samples in class $$ c_j $$ we use the following formula
+This will help us decide whether to over-sample or under-sample the data and see which samples actually produce a good result. To find out the how much to over-sample or under-sample in a class $$ c_j $$ we use the following formula:
 
 $$ UpdataSampleSize(F1_{i},c_j) = \frac{1 - f1_{i,j}}{\sum_{c_k \epsilon C} (1 - f1_{i,k})}\times N^{*} $$
 
 where initial $$ N^{*} = \frac{\| X_{train} \|}{\| C \|} $$
 
-Their proposed model included balanced augmentation throughout different classes and it outperformed all the baselines.
+Their proposed model includes balanced augmentation throughout different classes and it outperforms all the baselines.
 
 ![](http://dlclass2019.github.io/images/proposed_model_dysmp.png)
 
@@ -83,7 +83,7 @@ Unlike data-level methods, algorithm level methods do not change the distributio
 **Fig 6.** The CNN parameters $$ (\theta) $$ and class-dependent cost $$ (\xi) $$ used during the training process.
 <br /><br />
 
-Hence to summarize CoSen CNN, first we initialize CNN parameters $$ \theta $$ and cost matrix $$ \xi $$. After that we update $$ \xi $$ by $$ \delta F(\xi) $$ and learning rate $$ \gamma_{\xi} $$. Then update $$ \theta $$ by CNN gradients and learning rate $$ \gamma_{\theta} $$. Finally, we keeo alternating between both the updates of $$ \xi $$ and $$ \theta $$ until convergence. As a result, Cosen CNN outperformed basic CNN on different datasets.
+Hence to summarize CoSen CNN, first we initialize CNN parameters $$ \theta $$ and cost matrix $$ \xi $$. After that we update $$ \xi $$ by $$ \delta F(\xi) $$ and learning rate $$ \gamma_{\xi} $$. Then update $$ \theta $$ by CNN gradients and learning rate $$ \gamma_{\theta} $$. Finally, we keep alternating between both the updates of $$ \xi $$ and $$ \theta $$ until convergence. As a result, Cosen CNN outperformed basic CNN on different datasets.
 
 ### Hybrid Method
 
