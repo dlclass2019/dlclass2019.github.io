@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deep Learning with Class Imbalance"
+title:  "Understanding Generalization Performance for Deep Classifiers"
 date:   2019-12-02 09:00:09 -0500
 categories: post
 mathjax: true
