@@ -111,7 +111,7 @@ Hence, we can conclude that all the models were generalized perfectly, even with
 
 **Unique observations on Kernal Ridge Regression**
 
-We just observed that the generalization of model is necessary. However, the mechanism for good out-of-sample performance can be achieved with higher interpolation (overfitting) over in-sample training data.
+We just observed that the generalization of model is necessary. However, sometimes the mechanism for good out-of-sample performance can be achieved with higher interpolation (overfitting) over in-sample training data.
 
 Consider the following example of a Kernal ridge regression on MNIST data shown in Figure 2. We have observed the log error of out of sample digit pairs over different lambda value of regularization parameters. Regularization is used for generalization and minimize the in sample interpolation.
 
