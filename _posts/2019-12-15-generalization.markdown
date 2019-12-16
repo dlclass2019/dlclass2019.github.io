@@ -101,7 +101,7 @@ One point to remember was that the network fit to the corrupted training set per
 
 The second figure depicts the error on test set after convergence on the corrupted training data. Since we are fully overfitting the model with the corrupted training data, the test errors are same as generalization errors. We can see once we fully corrupted the training set, the generalization errors converges to 90%, which is the exact performance of random guessing of CIFAR 10.
 
-Hence, we conclude that
+Hence, to summarize
 
 1. Deep network can easily fit random variables.
 2. It has still good out of sample performance, even in sample error is 0 (100% overfit)
@@ -110,6 +110,7 @@ Hence, we conclude that
 Hence, we can conclude that all the models were generalized perfectly, even with the addition of random noise to the network's parameters.
 
 **Unique observations on Kernal Ridge Regression**
+
 We just observed that the generalization of model is necessary. However, the mechanism for good out-of-sample performance can be achieved with higher interpolation (overfitting) over in-sample training data.
 
 Consider the following example of a Kernal ridge regression on MNIST data shown in Figure 2. We have observed the log error of out of sample digit pairs over different lambda value of regularization parameters. Regularization is used for generalization and minimize the in sample interpolation.
@@ -127,4 +128,4 @@ We can observe that on a contrary, the out-of-sample error is decreasing as we d
 * Mikhali Belkin, Alexander Rakhlin, Alexandra B Tsybakov Does Data Interpolation Contradict Statistical Optimality? PMLR 2019 Volume 89
 * Mikhali Belkin, Siyuan Ma, Soumik Mandal To Understand Deep Learning We Need to Understand Kernel Learning PMLR 2018 Volume 80
 * Mikhali Belkin, Daniel Hsu, Partha P Mitra Overfitting or Perfect Fitting? Risk Bounds for Classification and Regression Rules that Interpolate NIPS 2018
-* Tengyuan Liang and Alexander Rakhlin Just Interpolate: Kernel “Ridgeless” Regression Can Generalize 2019
+* Tengyuan Liang and Alexander Rakhlin Just Interpolate: Kernel “Ridgeless” Regression Can Generalize 2019
