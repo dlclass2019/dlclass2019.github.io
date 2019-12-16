@@ -15,7 +15,7 @@ Posted by Rahul Pandey, Angeela Acharya, Junxiang (Will) Wang and Jomana Bashata
 ### Classification in Machine Learning
 A general problem of classification in machine learning can be defined as predicting an outcome y from some set Y of possible outcomes, on the basis of some observation x from a feature space X.
 
-Mathematically, we can define a classification problem as to find a map $$ f: X \rightarrow Y $$ based on $$ n $$ observations $$ (x1, y1), ..., (xn, yn) $$ such
+Mathematically, we can define a classification problem as to find a map $$ f: X \rightarrow Y $$ based on $$ n $$ observations $$ (x_1, y_1), ..., (x_n, y_n) $$ such
 that $$ f(x) $$ is a good prediction of $$ y $$ for a new observation $$ (x, y) $$.
 
 To measure the success of the map $$ f: X \rightarrow Y $$, we generally define loss function. Low loss function score implies better classification model.
@@ -81,7 +81,7 @@ $$ \mathbb{E} {\left \| R_n \right \|}_{\mathcal{F}_{B, d}} \leq 4B^2 \sqrt{\fra
 
 where $$ d $$ is the dimension of the input space $$ X $$
 
-Hence, we can get the **upper bound** on a feed forward neural network, which is a function of dimension d. This implies that we can use generalization on the neural network to optimize better, which will save a lot of computation and less overfitting over the training data.
+Hence, we can get the **upper bound** on a feed forward neural network, which is a function of dimension d. This implies that deep neural network can be generalized for better optimization, which will save a lot of computation and better out-of-sample performance over the test data.
 
 Also, one interesting observation is that we can't use sigmoid as a non linear function. It is because for sigmoid, $$ \sigma(0) \neq 0 $$, which changes the convergence property of the optimization network.
 
@@ -120,7 +120,7 @@ Consider the following example of a Kernal ridge regression on MNIST data shown 
 **Fig 2.** Test performance of Kernal ridge regression on MNIST digits for various values of regularization parameter $$ \lambda $$
 <br /><br />
 
-We can observe that on a contrary, the out-of-sample error is decreasing as we decrease the value of $$ \lambda $$. Also, for virtually all pairs of digits, the best out-of-sample performance is achieved at $$ \lambda = 0$$. This phenomenon is often called _implicit regularization_ for interpolated minimum-norm solutions in Kernal ridge regression.
+We can observe that on the contrary, the out-of-sample error is decreasing as we decrease the value of $$ \lambda $$. Also, for virtually all pairs of digits, the best out-of-sample performance is achieved at $$ \lambda = 0$$. This phenomenon is often called _implicit regularization_ for interpolated minimum-norm solutions in Kernal ridge regression.
 
 ## References
 * Bartlett, Peter L and Mendelson, Shahar Rademacher and Gaussian complexities: Risk bounds and structural results JMLR 2002
