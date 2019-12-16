@@ -53,7 +53,7 @@ $$ f1_{i,j} = \frac{2.Rec_{i,j}.Pre_{i,j}}{Rec_{i,j} + Pre_{i,j}} $$
 
 This will help us decide whether to over-sample or under-sample the data and see which samples actually produce a good result. To find out the how much to over-sample or under-sample in a class $$ c_j $$ we use the following formula:
 
-$$ UpdataSampleSize(F1_{i},c_j) = \frac{1 - f1_{i,j}}{\sum_{c_k \epsilon C} (1 - f1_{i,k})}\times N^{*} $$
+$$ UpdateSampleSize(F1_{i},c_j) = \frac{1 - f1_{i,j}}{\sum_{c_k \epsilon C} (1 - f1_{i,k})}\times N^{*} $$
 
 where initial $$ N^{*} = \frac{\| X_{train} \|}{\| C \|} $$
 

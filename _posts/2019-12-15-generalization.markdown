@@ -21,7 +21,7 @@ To measure the success of the map $$ f: X \rightarrow Y $$, we generally define 
 ### Deep Learning in Classification
 Most recent approach to solve classification problem is to use Deep Learning. Deep Learning uses deep networks, which are statistically deep compositions of non-linear functions.
 
-$$ f = f_L \circ f_{L1} \circ ... \circ f_{1} $$
+$$ f = f_L \circ f_{L_1} \circ ... \circ f_{1} $$
 
 There are various non-learning function, which has been used in deep learning. Some of the popular ones are sigmoid function and ReLu (Rectified Linear Unit) function.
 
@@ -35,7 +35,7 @@ __ReLu__
 
 $$ f_i \rightarrow \sigma(W_ix) $$, where
 
-$$ \sigma(v_i) = max{0,v_i} $$
+$$ \sigma(v_i) = max\{0,v_i\} $$
 
 ### Deep Learning and Generalization
 Deep Networks Classifiers generally perform much better than the traditional machine learning. That means their function map has a very low loss function score not only on training data, but on test data as well. However, classifiers in deep learning are heavily parameterized due to the complex nature of deep networks. The reason for its optimal performance despite overfitting is the size of the function space, which is large enough to interpolate data points.
