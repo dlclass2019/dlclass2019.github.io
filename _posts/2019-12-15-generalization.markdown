@@ -56,10 +56,10 @@ over all $$ X \times Y $$ i.i.d. pairs.
 
 NOTE i.i.d. $$ \rightarrow $$ independent and identically distributed random variables
 
-Now, to measure the richness of function $$ \mathfrak{F} $$ over all $$ X \times Y $$ i.i.d. pairs, we define Rademacher Complexity.
+Now, to measure the richness of function $$ \mathcal{F} $$ over all $$ X \times Y $$ i.i.d. pairs, we define Rademacher Complexity.
 
 #### Rademacher Complexity
-As stated above, Rademacher Complexity are used to find the richness of the learnt function in ML. Now, given a function $$ \mathfrak {F} $$, the Rademacher Complexity is $$ \mathbb{E}{\left \| R_n \right \|}_{\mathfrak{F}}, where the empirical process $$ R_n $$ is defined as
+As stated above, Rademacher Complexity are used to find the richness of the learnt function in ML. Now, given a function $$ \mathcal {F} $$, the Rademacher Complexity is $$ \mathbb{E}{\left \| R_n \right \|}_{\mathcal{F}} $$, where the empirical process $$ R_n $$ is defined as
 
 $$ R_n(f) = \frac{1}{n}\sum_{i=1}^{n} \epsilon_if(X_i) $$, where
 
