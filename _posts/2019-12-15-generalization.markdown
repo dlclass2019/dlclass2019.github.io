@@ -41,3 +41,26 @@ $$ \sigma(v_i) = max\{0,v_i\} $$
 Deep Networks Classifiers generally perform much better than the traditional machine learning. That means their function map has a very low loss function score not only on training data, but on test data as well. However, classifiers in deep learning are heavily parameterized due to the complex nature of deep networks. The reason for its optimal performance despite overfitting is the size of the function space, which is large enough to interpolate data points.
 
 In this blog, we will investigate the generalization of deep networks and compare its performance.
+
+Before jumping on generalization, let's talk about the probabilistic assumption of a deep learning model.
+
+Given a probability distribution $$ \mathbb{P} $$ on $$ X \times Y $$, we define a function $$ f $$ such that the risk $$ R(f) $$ is minimized.
+
+Risk is defined as
+
+$$ R(f) = \mathbb{E}l(f(X), Y) $$
+
+where $$ \mathbb{E} $$ is expectation and $$ l $$ is loss
+
+over all $$ X \times Y $$ i.i.d. pairs.
+
+NOTE i.i.d. $$ \rightarrow $$ independent and identically distributed random variables
+
+Now, to measure the richness of function $$ \mathfrak{F} $$ over all $$ X \times Y $$ i.i.d. pairs, we define Rademacher Complexity.
+
+#### Rademacher Complexity
+As stated above, Rademacher Complexity are used to find the richness of the learnt function in ML. Now, given a function $$ \mathfrak {F} $$, the Rademacher Complexity is $$ \mathbb{E}{\left \| R_n \right \|}_{\mathfrak{F}}, where the empirical process $$ R_n $$ is defined as
+
+$$ R_n(f) = \frac{1}{n}\sum_{i=1}^{n} \epsilon_if(X_i) $$, where
+
+$$ \epsilon_i $$ are Rademacher random variables, which are i.i.d. uniform on $$ \{-1, 1\} $$
